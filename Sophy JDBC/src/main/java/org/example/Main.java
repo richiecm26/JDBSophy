@@ -63,7 +63,7 @@ public class Main {
 
    */
 
-            String deleteQuery = "Delete from cliente where Cod_cliente = 101";
+            String deleteQuery = "Delete from cliente where Cod_cliente = 100";
             int rowsDeleted = conn.createStatement().executeUpdate(deleteQuery);
             if (rowsDeleted > 0) {
                 System.out.println(rowsDeleted + " rows deleted");
@@ -76,6 +76,7 @@ public class Main {
                     System.out.println(rs.getString("Telefono"));
                     System.out.println(rs.getString("contacto"));
                     System.out.println(rs.getString("direccion"));
+                    System.out.println(" ");
                 }
             }
 
