@@ -16,18 +16,23 @@ public class Main {
         try {
             Connection conn = DriverManager.getConnection(url, user, password);
 
+
 /*
-            String insertQuery = "insert into Usuarios (Nombre, Correo, Edad) values('Ben Lee','blee@gmail.com','20')";
+            String insertQuery = "insert into cliente (Cod_cliente, nombre_razon_social, Identificacion_NIT, correo, Telefono, contacto, direccion) values(101,'xyz colombia SAS',830228769, 'xyzcolombia@email.com',3008759041,'Juan Aponte', 'Avenida 102 # 38 -45, Barranquilla, Colombia')";
             int rowsAffected = conn.createStatement().executeUpdate(insertQuery);
             if (rowsAffected > 0) {
                 System.out.println(rowsAffected + " rows affected");
-                ResultSet rs = conn.createStatement().executeQuery("select * from Usuarios");
+                ResultSet rs = conn.createStatement().executeQuery("select * from cliente");
 
 
                 while (rs.next()) {
-                    System.out.println(rs.getString("Nombre"));
-                    System.out.println(rs.getString("Correo"));
-                    System.out.println(rs.getString("Edad"));
+                    System.out.println(rs.getString("Cod_cliente"));
+                    System.out.println(rs.getString("nombre_razon_social"));
+                    System.out.println(rs.getString("Identificacion_NIT"));
+                    System.out.println(rs.getString("correo"));
+                    System.out.println(rs.getString("Telefono"));
+                    System.out.println(rs.getString("contacto"));
+                    System.out.println(rs.getString("direccion"));
                     System.out.println(" ");
 
 
@@ -36,33 +41,41 @@ public class Main {
             }
 
 
-            String updateQuery = " Update Usuarios SET Nombre ='Ian Cox', Correo = 'Ianc@hotmail.com' WHERE Edad = 20";
+
+            String updateQuery = " Update cliente SET Cod_cliente = 78, nombre_razon_social ='Juana Rodriguez SA', Identificacion_NIT = 704782875, correo ='rodriguezjuana46@email.com', Telefono = 3158745689, contacto ='Arturo Pardo', direccion ='Carrera 108 # 07 -32, Bogota, Colombia' WHERE Cod_cliente = 78";
             int rowsUpdated = conn.createStatement().executeUpdate(updateQuery);
             if (rowsUpdated > 0) {
                 System.out.println(rowsUpdated + " rows updated");
-                ResultSet rs = conn.createStatement().executeQuery("select * from Usuarios");
+                ResultSet rs = conn.createStatement().executeQuery("select * from cliente");
 
 
                 while (rs.next()) {
-                    System.out.println(rs.getString("Nombre"));
-                    System.out.println(rs.getString("Correo"));
-                    System.out.println(rs.getString("Edad"));
+                    System.out.println(rs.getString("Cod_cliente"));
+                    System.out.println(rs.getString("nombre_razon_social"));
+                    System.out.println(rs.getString("Identificacion_NIT"));
+                    System.out.println(rs.getString("correo"));
+                    System.out.println(rs.getString("Telefono"));
+                    System.out.println(rs.getString("contacto"));
+                    System.out.println(rs.getString("direccion"));
                     System.out.println(" ");
                 }
             }
 
- */
+   */
 
-            String deleteQuery = "Delete from Usuarios where Edad = 47";
+            String deleteQuery = "Delete from cliente where Cod_cliente = 101";
             int rowsDeleted = conn.createStatement().executeUpdate(deleteQuery);
             if (rowsDeleted > 0) {
                 System.out.println(rowsDeleted + " rows deleted");
-                ResultSet rs = conn.createStatement().executeQuery("select * from Usuarios");
+                ResultSet rs = conn.createStatement().executeQuery("select * from cliente");
                 while (rs.next()) {
-                    System.out.println(rs.getString("Nombre"));
-                    System.out.println(rs.getString("Correo"));
-                    System.out.println(rs.getString("Edad"));
-                    System.out.println(" ");
+                    System.out.println(rs.getString("Cod_cliente"));
+                    System.out.println(rs.getString("nombre_razon_social"));
+                    System.out.println(rs.getString("Identificacion_NIT"));
+                    System.out.println(rs.getString("correo"));
+                    System.out.println(rs.getString("Telefono"));
+                    System.out.println(rs.getString("contacto"));
+                    System.out.println(rs.getString("direccion"));
                 }
             }
 
